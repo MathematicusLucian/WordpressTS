@@ -1,8 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { PostsListComponent } from './posts-list/posts-list.component';
+import { PostSingleComponent } from './post-single/post-single.component';
+import { PagesListComponent } from './pages-list/pages-list.component';
+import { PageSingleComponent } from './page-single/page-single.component';
+import { CategorySingleComponent } from './category-single/category-single.component';
+import { CategoriesListComponent } from './categories-list/categories-list.component';
+import { SiteIndexComponent } from './site-index/site-index.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: SiteIndexComponent },
+  { path: 'posts/', component: PostsListComponent },
+  { path: 'post/:dataset', component: PostSingleComponent }, 
+  { path: 'pages/', component: PagesListComponent },
+  { path: 'page/:dataset', component: PageSingleComponent }, 
+  { path: 'categories/', component: CategoriesListComponent },
+  { path: 'category/:dataset', component: CategorySingleComponent }, 
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
