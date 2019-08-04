@@ -9,7 +9,7 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class PostsService {
 
-  private apiUrl = 'https://poststatus.com/wp-json/wp/v2/';
+  private apiUrl = 'https://demo.wp-api.org/wp-json/wp/v2/';
 
 	constructor(private http: HttpClient) { }   
 
