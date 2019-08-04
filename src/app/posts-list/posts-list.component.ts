@@ -10,23 +10,20 @@ import { Post } from '../model/post';
 })
 export class PostsListComponent implements OnInit {
 
-  dataPosts = [];
+  dataPosts;
+  error = "";
 
   constructor(private postService: PostsService) { }
 
-  ngOnInit() {
-    console.log(this.getPostsList());
+  ngOnInit() { 
+    this.getPostsList();
   }
 
   getPostsList(){
-    this.postService.getPostsList().subscribe(
-      (res: any) => {  
-        this.dataPosts = res;
-      },
-      (err) => {
-        //this.error = err; 
-      }
-    );
+    console.log(this.postService.getPostsList());
+    this.postService.getPostsList()
+      .subscribe(res => this.dataPosts = res, error => this.error = error);
+    console.log(this.dataPosts);
     return this.dataPosts;
   }
 

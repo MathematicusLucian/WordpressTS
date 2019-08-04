@@ -16,14 +16,20 @@ export class PostsService {
 	getPostsList(): Observable<any> { 
     console.log(this.apiUrl + 'posts?_embed=true');
 		let response = this.http.get(this.apiUrl + 'posts?_embed=true').pipe(
-      map((res: Response) => res.json()));
+      map( (res: Response) => {
+          console.log(res); 
+          console.log(res.json()); 
+          return res; 
+        })
+      );
     console.log(response);
     return response;
 	}
 
 	getPost(slug: string): Observable<any> {  
 		let response = this.http.get(this.apiUrl + `posts?slug=${slug}`).pipe( 
-			map((res: Response) => res.json()));
+      map( (res: Response) => res.json() )
+      );
     return response;
 	} 
 
