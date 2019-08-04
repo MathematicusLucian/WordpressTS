@@ -1,4 +1,4 @@
-# ngwp
+# WordpressTS
 Angular Front-End App rendering WP theme and fetching JSON from Wordpress Headless API  
 
 The goal behind this project is to remove the front-end from the back-end WordPress installation. By utilizing WP-API and other plugins you can turn your WordPress installation into a back-end API endpoint.  
