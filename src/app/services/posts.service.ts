@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core'; 
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 
-import { Observable, throwError } from 'rxjs';
-import 'rxjs/add/operator/map'
+import { Observable, throwError } from 'rxjs'; 
 import { map, catchError } from 'rxjs/operators';  
 
 @Injectable({
@@ -10,13 +9,15 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class PostsService {
 
-  private apiUrl = 'https://www.sitepoint.com/wp-json/wp/v2/';
+  private apiUrl = 'https://poststatus.com/wp-json/wp/v2/';
 
 	constructor(private http: HttpClient) { }   
 
-	getPostsList(): Observable<any> {  
+	getPostsList(): Observable<any> { 
+    console.log(this.apiUrl + 'posts?_embed=true');
 		let response = this.http.get(this.apiUrl + 'posts?_embed=true').pipe(
       map((res: Response) => res.json()));
+    console.log(response);
     return response;
 	}
 
