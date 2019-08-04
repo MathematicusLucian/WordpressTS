@@ -1,5 +1,5 @@
 # WordpressTS
-Angular Front-End App rendering WP theme and fetching JSON via API from Wordpress set as Headless CMS
+Angular Front-End App for Headless CMS (Wordpress modified). Fetches posts as JSON via API, and renders WP theme.
 
 The goal behind this project is to remove the front-end from the back-end WordPress installation. By utilizing WP-API and other plugins you can turn your WordPress installation into a back-end API endpoint.
   
