@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +31,8 @@ import { SiteIndexComponent } from './site-index/site-index.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, 
+    HttpClientJsonpModule,
     AppRoutingModule
   ],
   providers: [],
