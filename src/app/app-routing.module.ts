@@ -12,9 +12,10 @@ import { SiteIndexComponent } from './site-index/site-index.component';
 const routes: Routes = [
   { path: '', component: SiteIndexComponent },
   { path: 'posts/', component: PostsListComponent },
-  { path: 'post/:dataset', component: PostSingleComponent }, 
+  { path: 'posts/:author', component: PostsListComponent },
+  { path: 'post/:id', component: PostSingleComponent }, 
   { path: 'pages/', component: PagesListComponent },
-  { path: 'page/:dataset', component: PageSingleComponent }, 
+  { path: 'page/:id', component: PageSingleComponent }, 
   { path: 'categories/', component: CategoriesListComponent },
   { path: 'category/:dataset', component: CategorySingleComponent }, 
 ];
