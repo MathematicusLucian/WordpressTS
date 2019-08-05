@@ -5,12 +5,13 @@
     <div fxLayout="row wrap" fxLayoutGap="16px">
 
         <mat-card fxFlex="calc(50% - 26px)" *ngFor="let post of posts$ | async">
-            <mat-card-header>
+             <img matCardImage [src]="default_img">
+             <!--<img matCardImage [src]="post._embedded['wp:featuredmedia'][0]['media_details'].sizes['medium_large'].source_url">-->
+             <mat-card-header>
                 <mat-card-title>{{ post.title.rendered }}</mat-card-title>
                 <mat-card-subtitle>{{ post.date_gmt | date }}</mat-card-subtitle>
             </mat-card-header>
-            <img matCardImage [src]="post._embedded['wp:featuredmedia'][0]['media_details'].sizes['medium_large'].source_url">
-            <mat-card-content [innerHTML]="post.excerpt.rendered"></mat-card-content>
+           <mat-card-content [innerHTML]="post.excerpt.rendered"></mat-card-content>
             <mat-card-actions align="start">
                 <a mat-button [href]="post.link">View</a>
             </mat-card-actions>
