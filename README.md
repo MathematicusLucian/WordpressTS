@@ -1,5 +1,5 @@
 # WordpressTS
-Angular Front-End App for Headless CMS (Wordpress modified). Fetches posts as JSON via API, and renders WP theme.
+Angular Front-End App for Headless CMS (Wordpress modified). Fetches posts as JSON via API, and renders Material theme.
 
 ## /posts
 ![posts](./readme_imgs/v8vicvkck.png)  
@@ -15,6 +15,7 @@ By decoupling front-and back-ends this project aims to:
 - Make theme development easier--no PHP!  
 - Enable back-end-as-a-service for WordPress (i.e. WordPress is installed on a different server than your front-end files)  
 - Speedier blogs and websites (e.g. CDN for your front-end and caching of API requests)  
+- Render a Material theme - typical WP themes feature PHP code, and they are not suitable for Angular, unless severely refactored, with considerable cost in development time - makes more sense to just build an Angular Material theme.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
 
