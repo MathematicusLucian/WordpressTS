@@ -9,9 +9,6 @@
                 <mat-card-subtitle>{{ post.date_gmt | date }}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content [innerHTML]="post.content.rendered"></mat-card-content>
-            <mat-card-actions align="start">
-                <a mat-button [href]="post.link">View</a>
-            </mat-card-actions>
         </mat-card>
     </div>
 
