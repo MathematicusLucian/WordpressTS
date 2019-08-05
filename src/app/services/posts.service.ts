@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class PostsService {
 
-  private apiUrl = 'https://demo.wp-api.org/wp-json/wp/v2/';
+  private apiUrl = 'https://www.sitepoint.com/wp-json/wp/v2/';
   //posts: Post[] = [];
 
 	constructor(private http: HttpClient) { }   
