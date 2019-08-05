@@ -18,8 +18,6 @@ export class PostSingleComponent {
   constructor(private route: ActivatedRoute, private postService: PostsService) {
     this.slug = this.route.snapshot.paramMap.get('id'); 
 
-    this.posts$ = this.postService.getPost(this.slug);
-
-    console.log(this.posts$);
+    this.posts$ = this.postService.getPost(this.slug); 
   }
 } 
