@@ -25,12 +25,12 @@ export class PostsService {
       }
     });
   } 
-
-	/* getPost(slug: string): Observable<any> {  
-		let response = this.http.get(this.apiUrl + `posts?slug=${slug}`).pipe( 
-      map( (res: Response) => res.json() )
-      );
-    return response;
-	} */
+  
+	getPost(): Observable<any[]> {  //Post{
+    return this.http.get<any[]>(this.apiUrl + 'posts?slug=${slug}', {
+      params: {
+      }
+    });
+  }  
 
 }
