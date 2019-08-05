@@ -14,6 +14,7 @@ import { PageSingleComponent } from './page-single/page-single.component';
 import { CategorySingleComponent } from './category-single/category-single.component';
 import { CategoriesListComponent } from './categories-list/categories-list.component';
 import { SiteIndexComponent } from './site-index/site-index.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SiteIndexComponent } from './site-index/site-index.component';
     BrowserModule,
     HttpClientModule, 
     HttpClientJsonpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
