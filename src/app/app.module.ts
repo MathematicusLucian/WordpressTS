@@ -17,6 +17,7 @@ import { SiteIndexComponent } from './site-index/site-index.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule  } from './app-material.module';
+import { FlexModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AppMaterialModule  } from './app-material.module';
     HttpClientJsonpModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppMaterialModule 
+    AppMaterialModule,
+    FlexModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
