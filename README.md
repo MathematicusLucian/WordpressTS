@@ -4,6 +4,9 @@ Angular Front-End App for Headless CMS (Wordpress modified). Fetches posts as JS
 ## /posts
 ![posts](./readme_imgs/v8vicvkck.png)  
 
+## /post/[slug]
+![post-slug](./readme_imgs/post-slug.png)
+
 The goal behind this project is to remove the front-end from the back-end WordPress installation. As of WordPress 4.7, the WP-API is integrated into WordPress core. By utilizing WP-API and other plugins you can turn your WordPress installation into a back-end API endpoint.
 
 Back-end: <a href="https://github.com/k1n4kut4/Wordpress-Decapitated">https://github.com/k1n4kut4/Wordpress-Decapitated</a>
