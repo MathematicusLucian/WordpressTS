@@ -1,0 +1,12 @@
+.page-wrapper{
+    
+    mat-card {
+        margin: 10px;
+
+        .mat-card-content, 
+        .mat-card-subtitle {
+            font-size: 16px;
+            line-height: 15pt;
+        }
+    }
+}
