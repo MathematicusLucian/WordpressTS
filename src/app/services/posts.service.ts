@@ -26,7 +26,7 @@ export class PostsService {
     });
   } 
   
-	getPost(): Observable<any[]> {  //Post{
+	getPost(slug: string): Observable<any[]> {  //Post{
     return this.http.get<any[]>(this.apiUrl + 'posts?slug=${slug}', {
       params: {
       }
