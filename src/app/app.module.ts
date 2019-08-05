@@ -16,7 +16,7 @@ import { CategoriesListComponent } from './categories-list/categories-list.compo
 import { SiteIndexComponent } from './site-index/site-index.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppMaterialModule  } from './material.module';
+import { AppMaterialModule  } from './app-material.module';
 
 @NgModule({
   declarations: [
