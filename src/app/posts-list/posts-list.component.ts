@@ -1,30 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
+//import { Post } from '../model/post';
 import { PostsService } from '../services/posts.service';
-import { Post } from '../model/post';
 
 @Component({
   selector: 'app-posts-list',
   templateUrl: './posts-list.component.html',
   styleUrls: ['./posts-list.component.scss']
 })
-export class PostsListComponent implements OnInit {
+export class PostsListComponent {
+  
+  posts$: Observable<any[]>;
 
-  dataPosts;
-  error = "";
+  constructor(private postService: PostsService) {
+    this.posts$ = this.postService.getPostsList();
 
-  constructor(private postService: PostsService) { }
-
-  ngOnInit() { 
-    this.getPostsList();
+    console.log(this.posts$);
   }
-
-  getPostsList(){
-    console.log(this.postService.getPostsList());
-    this.postService.getPostsList()
-      .subscribe(res => this.dataPosts = res, error => this.error = error);
-    console.log(this.dataPosts);
-    return this.dataPosts;
-  }
-
-}
+} 

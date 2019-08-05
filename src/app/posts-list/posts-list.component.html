@@ -1,1 +1,5 @@
 <p>posts-list works!</p>
+<div *ngFor="let post of posts$ | async"> 
+    <div>{{ post.title.rendered }}</div>
+    <div>{{ post.date_gmt | date }}</div>
+</div>

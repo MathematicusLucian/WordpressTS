@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core'; 
-import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+//import { map, catchError } from 'rxjs/operators';
 
-import { Observable, throwError } from 'rxjs'; 
-import { map, catchError } from 'rxjs/operators';  
+//import { Post } from '../model/post';
 
 @Injectable({
   providedIn: 'root'
@@ -10,27 +11,26 @@ import { map, catchError } from 'rxjs/operators';
 export class PostsService {
 
   private apiUrl = 'https://demo.wp-api.org/wp-json/wp/v2/';
+  //posts: Post[] = [];
 
 	constructor(private http: HttpClient) { }   
 
-	getPostsList(): Observable<any> { 
-    console.log(this.apiUrl + 'posts?_embed=true');
-		let response = this.http.get(this.apiUrl + 'posts?_embed=true').pipe(
-      map( (res: Response) => {
-          console.log(res); 
-          console.log(res.json()); 
-          return res; 
-        })
-      );
-    console.log(response);
-    return response;
-	}
+  ngOnInit(){ 
+  } 
+  
+	getPostsList(): Observable<any[]> {  //Post{
+    return this.http.get<any[]>(this.apiUrl + 'posts?_embed=true', {
+      params: {
+        per_page: '6'
+      }
+    });
+  } 
 
-	getPost(slug: string): Observable<any> {  
+	/* getPost(slug: string): Observable<any> {  
 		let response = this.http.get(this.apiUrl + `posts?slug=${slug}`).pipe( 
       map( (res: Response) => res.json() )
       );
     return response;
-	} 
+	} */
 
 }
